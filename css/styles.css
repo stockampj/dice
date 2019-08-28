@@ -4,25 +4,50 @@ body {
 
 .dice1 {
   background-image: url(../img/1.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
 }
 
 .dice2 {
   background-image: url(../img/2.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
 }
 
 .dice3 {
   background-image: url(../img/3.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
 }
 
 .dice4 {
   background-image: url(../img/4.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
 }
 
 
 .dice5 {
   background-image: url(../img/5.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
 }
 
 .dice6 {
   background-image: url(../img/6.png);
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+}
+
+.playerscreen {
+  display: block;
+  width: 40%;
+  min-width: 300px;
+  float: left;
 }

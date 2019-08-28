@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <link rel="shortcut icon" type="image/png" href="img/tab icon.png">
-    <title>Pig Dice</title>
-  </head>
-  <body>
-    <div class="container">
-        <div id="splashscreen">
-          <p>Play Pig Dice (for your soul)</p>
-          <label for="player1-name">Player 1: Enter your Name</label>
-          <input type="text" name="" value="Player 1" id="player1-name">
-          <label for="player2-name">Player 2: Enter your Name</label>
-          <input type="text" name="" value="Player 2" id="player2-name">
-          <button type="button" id="startgame" name="button">Do You Want To Play?</button>
-        </div>
-        <div id="gamescreen">
-          <div class="row">
-            <div class="col-md-5" id="player1">
-              <p id="player1-name">Player1</p>
-              <p id="player1-score"></p>
-              <div id="dice-display-1">
-                <p id="turn-tally"></p>
-                <div id="dice-roll-player1">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5" id="player2">
-              <p id="player2-name">Player2</p>
-              <p id="player2-score"></p>
-              <div id="dice-display-2">
-                <p id="turn-tally"></p>
-                <div id="dice-roll-player2">
-                </div>
-              </div>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="shortcut icon" type="image/png" href="img/tab icon.png">
+  <title>Pig Dice</title>
+</head>
+<body>
+  <div class="container">
+    <div id="splashscreen">
+      <p>Play Pig Dice (for your soul)</p>
+      <form id="start" action="index.html" method="post">
+        <label for="player1-name">Player 1: Enter your Name</label>
+        <input type="text" name="" value="Player 1" id="player1-name">
+        <label for="player2-name">Player 2: Enter your Name</label>
+        <input type="text" name="" value="Player 2" id="player2-name">
+        <button type="submit" id="start-game" name="button">Do You Want To Play?</button>
+      </form>
+    </div>
+    <div id="gamescreen">
+      <div class="row">
+        <div class="col playerscreen" id="player1-panel">
+          <p id="player1display">Player1</p>
+          <p id="player1-score"></p>
+          <div id="dice-display-1">
           </div>
+          <p id="turn-tally"></p>
+          <div id="dice-roll-player1">
+          </div>
+          <button type="button" id="roll-button1">Roll</button>
+          <button type="button" id="hold-button1">End Turn</button>
         </div>
+        <div class="col playerscreen" id="player2-panel">
+          <p id="player2display">Player1</p>
+          <p id="player2-score"></p>
+          <div id="dice-display-1">
+          </div>
+          <p id="turn-tally"></p>
+          <div id="dice-roll-player2">
+          </div>
+          <button type="button" id="roll-button2">Roll</button>
+          <button type="button" id="hold-button2">End Turn</button>
+        </div>
+      </div>
 
-        <img src="img/6.png" alt="" height="60px">
-        <img src="img/3.png" alt="" height="60px">
-        <img src="img/1.png" alt="" height="60px">
-        <img src="img/4.png" alt="" height="60px">
-        <img src="img/2.png" alt="" height="60px">
-        <img src="img/5.png" alt="" height="60px">
-
-
-
-
-
-
+      <img src="img/6.png" alt="" height="60px">
+      <img src="img/3.png" alt="" height="60px">
+      <img src="img/1.png" alt="" height="60px">
+      <img src="img/4.png" alt="" height="60px">
+      <img src="img/2.png" alt="" height="60px">
+      <img src="img/5.png" alt="" height="60px">
 
 
     </div>
-  </body>
+  </div>
+</body>
 </html>
