@@ -1,3 +1,4 @@
+
 // Business End for game
 var game = new Game();
 player1 = new Player();
@@ -10,7 +11,7 @@ function Game() {
 }
 
 Game.prototype.addPlayer = function (player){
-    this.players.push(player);
+  this.players.push(player);
 }
 
 Game.prototype.endGame = function (){
@@ -38,9 +39,10 @@ Player.prototype.roll = function() {
     this.turnscore = [];
     this.endTurn();
   } else {
-      this.turnscore.push(roll);
+    this.turnscore.push(roll);
   }
   return roll;
+
 }
 
 Player.prototype.endTurn = function() {
@@ -65,13 +67,69 @@ $(document).ready(function() {
     player2.addName(player2name);
     game.addPlayer(player1);
     game.addPlayer(player2);
+    $("#player1display").text(player1name);
+    $("#player2display").text(player2name);
   });
 
   $("#roll-button1").click(function() {
-    player1.roll();
-    console.log(player1.roll());
-    var index = diceClass[player1.roll()];
+    currentRollValue = player1.roll();
+    console.log(currentRollValue);
+    var index = diceClass[currentRollValue];
     console.log(index);
-    // $("#dice-display-1").addClass(class);
+    $("#dice-display-1").removeClass("dice1");
+    $("#dice-display-1").removeClass("dice2");
+    $("#dice-display-1").removeClass("dice3");
+    $("#dice-display-1").removeClass("dice4");
+    $("#dice-display-1").removeClass("dice5");
+    $("#dice-display-1").removeClass("dice6");
+    $("#dice-display-1").addClass(index);
+
+    var turnscoreDisplay = 0;
+    player1.turnscore.forEach(function(val) {
+      turnscoreDisplay += val
+      $("#turn-tally1").text(turnscoreDisplay);
+    });
+    if (currentRollValue === 1){
+      $("#turn-tally1").text("0");
+    }
   });
+
+
+  $("#roll-button2").click(function() {
+    currentRollValue = player2.roll();
+    console.log(currentRollValue);
+    var index = diceClass[currentRollValue];
+    console.log(index);
+    $("#dice-display-2").removeClass("dice1");
+    $("#dice-display-2").removeClass("dice2");
+    $("#dice-display-2").removeClass("dice3");
+    $("#dice-display-2").removeClass("dice4");
+    $("#dice-display-2").removeClass("dice5");
+    $("#dice-display-2").removeClass("dice6");
+    $("#dice-display-2").addClass(index);
+
+    var turnscoreDisplay = 0;
+    player2.turnscore.forEach(function(val) {
+      turnscoreDisplay += val
+      $("#turn-tally2").text(turnscoreDisplay);
+    });
+    if (currentRollValue === 1) {
+      $("#turn-tally2").text("0");
+    }
+  });
+
+  $("#hold-button1").click(function() {
+    player1.endTurn();
+    $("#player1-score").text(player1.totalscore);
+    $("#turn-tally1").text(" ");
+  })
+
+  $("#hold-button2").click(function() {
+    player2.endTurn();
+    $("#player2-score").text(player2.totalscore);
+    $("#turn-tally2").text(" ");
+  })
 });
+
+
+// });
