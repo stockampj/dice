@@ -19,11 +19,23 @@ function Player (name)
   this.turn = true;
 }
 
-Player.prototype.roll function (){
+Player.prototype.roll function() {
   var roll = Math.floor(Math.random()*6)+1
-  if (roll === 1){
-    // this.turn = false
-  } else if
+  if (roll === 1) {
+    this.turnscore = [];
+    this.endTurn();
+  } else {
+      this.turnscore.push(roll);
+  }
+}
+
+Player.prototype.endTurn function() {
+  var turnpoints = 0;
+  this.turnscore.forEach(val) {
+    turnpoints = turnpoints + val;
+  }
+  this.totalscore += turnpoints;
+    this.turn = false
 }
 
 
