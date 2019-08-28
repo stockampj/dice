@@ -1,0 +1,28 @@
+body {
+  background-color: lightgray;
+}
+
+.dice1 {
+  background-image: url(../img/1.png);
+}
+
+.dice2 {
+  background-image: url(../img/2.png);
+}
+
+.dice3 {
+  background-image: url(../img/3.png);
+}
+
+.dice4 {
+  background-image: url(../img/4.png);
+}
+
+
+.dice5 {
+  background-image: url(../img/5.png);
+}
+
+.dice6 {
+  background-image: url(../img/6.png);
+}

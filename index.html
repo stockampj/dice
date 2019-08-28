@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="shortcut icon" type="image/png" href="img/tab icon.png">
+    <title>Pig Dice</title>
   </head>
   <body>
-    
+    <div class="container">
+        <div id="splashscreen">
+          <p>Play Pig Dice (for your soul)</p>
+          <label for="player1-name">Player 1: Enter your Name</label>
+          <input type="text" name="" value="Player 1" id="player1-name">
+          <label for="player2-name">Player 2: Enter your Name</label>
+          <input type="text" name="" value="Player 2" id="player2-name">
+          <button type="button" id="startgame" name="button">Do You Want To Play?</button>
+        </div>
+        <div id="gamescreen">
+          <div class="row">
+            <div class="col-md-5" id="player1">
+              <p id="player1-name">Player1</p>
+              <p id="player1-score"></p>
+              <div id="dice-display-1">
+                <p id="turn-tally"></p>
+                <div id="dice-roll-player1">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5" id="player2">
+              <p id="player2-name">Player2</p>
+              <p id="player2-score"></p>
+              <div id="dice-display-2">
+                <p id="turn-tally"></p>
+                <div id="dice-roll-player2">
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <img src="img/6.png" alt="" height="60px">
+        <img src="img/3.png" alt="" height="60px">
+        <img src="img/1.png" alt="" height="60px">
+        <img src="img/4.png" alt="" height="60px">
+        <img src="img/2.png" alt="" height="60px">
+        <img src="img/5.png" alt="" height="60px">
+
+
+
+
+
+
+
+
+    </div>
   </body>
 </html>
