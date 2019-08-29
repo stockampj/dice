@@ -52,6 +52,9 @@ Player.prototype.endTurn = function() {
   player2.turn = true
   this.turn = false
   this.turnscore = [];
+  if (this.totalscore >= 100) {
+    game.endGame();
+  }
 }
 
   // Front End
