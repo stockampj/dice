@@ -2,14 +2,29 @@ body {
   background-color: #ab8641;
   background-image: url(../img/background.jpg);
   color: white;
+}
 
+h1 {
+  font-size: 80px;
+  text-align: center;
 }
 
 h2 {
   text-align: center;
+  font-size: 40px;
 }
 
+h4 {
+  font-size: 16px;
+}
 
+#splashscreen {
+  display: block;
+  margin-left: -10%;
+  margin-right: -10%;
+  background-color: rgba(54, 125, 63, 0.5);
+  height: 600px;
+}
 
 .screenborder {
   display: block;
@@ -31,14 +46,16 @@ h2 {
 
 button {
   display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
   padding: 5px;
   font-size: 20px;
   width: 40%;
-  background-color: #dbb60d;
-  border: none
+  background-color: rgba(212, 212, 212, .6);
+  border: none;
 }
 
 .leftish{
@@ -90,7 +107,7 @@ button {
   min-height: 200px;
   overflow-y: hidden;
   padding: 10px;
-  background-color: rgba(36, 36, 36, 0.2);
+  background-color: rgba(36, 36, 36, 0.4);
   border-radius: 30px;
   margin: 5px;
   margin-left: auto;
@@ -103,12 +120,35 @@ button {
   padding: 5px;
 }
 
-
+#scorebar {
+  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .scorething {
-  width: 50%;
+  width: 45%;
   height: 100%;
   float: left;
+}
+
+#scoreleft {
+  background-color: rgba(173, 17, 0, 0.8);
+  border: solid thick darkred;
+  margin-left: 3%;
+  margin-right: 2%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+#scoreright {
+  background-color: rgba(0, 0, 173, 0.8);
+  border: solid thick darkblue;
+  margin-right: 3%;
+  margin-left: 2%;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 
@@ -142,4 +182,48 @@ button {
   display:inline-block;
   margin-top: 50%;
   height: 230px;
+  text-align: center;
+}
+
+.hooray {
+  font-size: 40px;
+}
+
+input {
+  display: inline-block;
+  font-size: 20px;
+  background: rgba(212, 212, 212, .5);
+  color: white;
+  font-weight: 600;
+  width: 30%;
+  border: none;
+}
+
+
+.playerinput {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+}
+
+.inputscreen {
+  width: 45%;
+  float: left;
+  margin: auto;
+  margin: auto;
+}
+
+#left {
+  text-align: right;
+  margin-right: 5%
+}
+
+#right {
+  text-align: left;
+  margin-left: 5%;
+}
+
+#gamescreen {
+  display: none;
 }

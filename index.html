@@ -9,17 +9,28 @@
   <title>Pig Dice</title>
 </head>
 <body>
+
+  <div id="splashscreen">
+    <h1>Dice of Destiny</h1>
+
+    <form id="start" action="index.html" method="post">
+      <div class="row playerinput">
+        <div class="col inputscreen" id="left">
+          <label for="player1-name">Player 1: Enter your Name</label><br>
+          <input type="text" name="" value="" id="player1-name">
+        </div>
+
+        <div class="col inputscreen" id="right">
+          <label for="player2-name">Player 2: Enter your Name</label><br>
+          <input type="text" name="" value="" id="player2-name">
+        </div>
+      </div>
+
+      <button type="submit" id="start-game" name="button">Do You Want To Play?</button>
+
+    </form>
+  </div>
   <div class="container">
-    <div id="splashscreen">
-      <h1>Play Pig Dice</h1>
-      <form id="start" action="index.html" method="post">
-        <label for="player1-name">Player 1: Enter your Name</label>
-        <input type="text" name="" value="" id="player1-name">
-        <label for="player2-name">Player 2: Enter your Name</label>
-        <input type="text" name="" value="" id="player2-name">
-        <button type="submit" id="start-game" name="button">Do You Want To Play?</button>
-      </form>
-    </div>
     <div id="gamescreen">
 
       <div class="row" id="scorebar">
@@ -38,46 +49,46 @@
       <div class="row">
         <div class="col playerscreen" id="player1-panel">
           <h2 class="player1display">Player1</h2>
-            <div class="row screenborder">
+          <div class="row screenborder">
 
-              <div class="col leftish" >
-                <div id="dice-display-1">
-                </div>
-                <button type="button" id="roll-button1">Roll</button>
+            <div class="col leftish" >
+              <div id="dice-display-1">
               </div>
-              <div class="col middleish">
-                <div class="dice-log" id="dice-turn-roll-1">
-                </div>
-                <button type="button" id="hold-button1">Stand</button>
+              <button type="button" id="roll-button1">Roll</button>
+            </div>
+            <div class="col middleish">
+              <div class="dice-log" id="dice-turn-roll-1">
               </div>
-              <div class="col rightish">
-                <div class="scorebox">
-                  <h4>Total Score: <span class="player1-score">0</span></h4>
-                  <h4>Stand Score: <span id="turn-tally1">0</span></h4>
-                </div>
+              <button type="button" id="hold-button1">Stand</button>
+            </div>
+            <div class="col rightish">
+              <div class="scorebox">
+
+                <h4>Stand Score <br><span class="hooray" id="turn-tally1"> 0</span></h4>
               </div>
             </div>
+          </div>
         </div>
         <div class="col playerscreen hidden" id="player2-panel">
           <h2 class="player2display">Player2</h2>
-            <div class="row screenborder">
-              <div class="col leftish" >
-                <div id="dice-display-2">
-                </div>
-                <button type="button" id="roll-button2">Roll</button>
+          <div class="row screenborder">
+            <div class="col leftish" >
+              <div id="dice-display-2">
               </div>
-              <div class="col middleish">
-                <div class="dice-log" id="dice-turn-roll-2">
-                </div>
-                <button type="button" id="hold-button2">Stand</button>
+              <button type="button" id="roll-button2">Roll</button>
+            </div>
+            <div class="col middleish">
+              <div class="dice-log" id="dice-turn-roll-2">
               </div>
-              <div class="col rightish">
-                <div class="scorebox">
-                  <h5>Total Score: <span class="player2-score">0</span></h5>
-                  <h5>Stand Score: <span id="turn-tally2">0</span></h5>
-                </div>
+              <button type="button" id="hold-button2">Stand</button>
+            </div>
+            <div class="col rightish">
+              <div class="scorebox">
+
+                <h4>Stand Score <br><span class="hooray" id="turn-tally2"> 0</span></h4>
               </div>
             </div>
+          </div>
         </div>
 
       </div>

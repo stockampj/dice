@@ -76,6 +76,8 @@ $(document).ready(function() {
     game.addPlayer(player2);
     $(".player1display").text(player1name);
     $(".player2display").text(player2name);
+    $("#splashscreen").hide();
+    $("#gamescreen").fadeIn(1000);
   });
 
   $("#roll-button1").click(function() {
