@@ -14,49 +14,73 @@
       <p>Play Pig Dice (for your soul)</p>
       <form id="start" action="index.html" method="post">
         <label for="player1-name">Player 1: Enter your Name</label>
-        <input type="text" name="" value="Player 1" id="player1-name">
+        <input type="text" name="" value="" id="player1-name">
         <label for="player2-name">Player 2: Enter your Name</label>
-        <input type="text" name="" value="Player 2" id="player2-name">
+        <input type="text" name="" value="" id="player2-name">
         <button type="submit" id="start-game" name="button">Do You Want To Play?</button>
       </form>
     </div>
     <div id="gamescreen">
+
+      <div class="row" id="scorebar">
+
+        <div class="col scorething" id="scoreleft">
+          <h5 class="player1display">Player1</h5>
+          <h5>Total Score: <span class="player1-score">0</span></h5>
+        </div>
+
+        <div class="col scorething" id="scoreright">
+          <h5 class="player2display">Player2</h5>
+          <h5>Total Score: <span class="player2-score">0</span></h5>
+        </div>
+
+      </div>
       <div class="row">
         <div class="col playerscreen" id="player1-panel">
-          <h2 id="player1display">Player1</h2>
-          <h3>Total Score:</h3>
-          <p id="player1-score">0</p>
-          <div id="dice-display-1">
-          </div>
-          <h3>Current Turn Score:</h3>
-          <p id="turn-tally1">0</p>
-          <button type="button" id="roll-button1">Roll</button>
-          <button type="button" id="hold-button1">End Turn</button>
-          <div class="dice-log" id="dice-turn-roll-1">
-          </div>
+          <h2 class="player1display">Player1</h2>
+            <div class="row screenborder">
+
+              <div class="col leftish" >
+                <div id="dice-display-1">
+                </div>
+                <button type="button" id="roll-button1">Roll</button>
+              </div>
+              <div class="col middleish">
+                <div class="dice-log" id="dice-turn-roll-1">
+                </div>
+                <button type="button" id="hold-button1">Stand</button>
+              </div>
+              <div class="col rightish">
+                <div class="scorebox">
+                  <h5>Total Score: <span class="player1-score">0</span></h5>
+                  <h5>Stand Score: <span id="turn-tally1">0</span></h5>
+                </div>
+              </div>
+            </div>
         </div>
-        <div class="col playerscreen" id="player2-panel">
-          <h2 id="player2display">Player2</h2>
-          <h3>Total Score:</h3>
-          <p id="player2-score">0</p>
-          <div id="dice-display-2">
-          </div>
-          <h3>Current Turn Score:</h3>
-          <p id="turn-tally2">0</p>
-          <button type="button" id="roll-button2">Roll</button>
-          <button type="button" id="hold-button2">End Turn</button>
-          <div class="dice-log" id="dice-turn-roll-2">
-          </div>
+        <div class="col playerscreen hidden" id="player2-panel">
+          <h2 class="player2display">Player2</h2>
+            <div class="row screenborder">
+              <div class="col leftish" >
+                <div id="dice-display-2">
+                </div>
+                <button type="button" id="roll-button2">Roll</button>
+              </div>
+              <div class="col middleish">
+                <div class="dice-log" id="dice-turn-roll-2">
+                </div>
+                <button type="button" id="hold-button2">Stand</button>
+              </div>
+              <div class="col rightish">
+                <div class="scorebox">
+                  <h5>Total Score: <span class="player2-score">0</span></h5>
+                  <h5>Stand Score: <span id="turn-tally2">0</span></h5>
+                </div>
+              </div>
+            </div>
         </div>
+
       </div>
-
-      <!-- <img src="img/6.png" alt="" height="60px">
-      <img src="img/3.png" alt="" height="60px">
-      <img src="img/1.png" alt="" height="60px">
-      <img src="img/4.png" alt="" height="60px">
-      <img src="img/2.png" alt="" height="60px">
-      <img src="img/5.png" alt="" height="60px"> -->
-
 
     </div>
   </div>
