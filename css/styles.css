@@ -7,41 +7,19 @@ body {
   width: 200px;
 }
 
+#dice-display-1 img{
+  height: 200px;
+}
+
 #dice-display-2 {
   height: 200px;
   width: 200px;
 }
 
-.dice1 {
-  background-image: url(../img/1.png);
-  background-size: cover;
+#dice-display-2 img{
+  height: 200px;
 }
 
-.dice2 {
-  background-image: url(../img/2.png);
-  background-size: cover;
-}
-
-.dice3 {
-  background-image: url(../img/3.png);
-  background-size: cover;
-}
-
-.dice4 {
-  background-image: url(../img/4.png);
-  background-size: cover;
-}
-
-
-.dice5 {
-  background-image: url(../img/5.png);
-  background-size: cover;
-}
-
-.dice6 {
-  background-image: url(../img/6.png);
-  background-size: cover;
-}
 
 .playerscreen {
   display: block;

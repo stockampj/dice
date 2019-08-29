@@ -6,8 +6,6 @@ player2 = new Player();
 
 function Game() {
   this.players = []
-  // this.player1 = player1,
-  // this.player2 = player2
 }
 
 Game.prototype.addPlayer = function (player){
@@ -81,14 +79,10 @@ $(document).ready(function() {
     currentRollValue = player1.roll();
 
     var index = diceClass[currentRollValue];
+    $("#dice-turn-roll-1").append(htmlText)
+    $("#dice-display-1").text("")
+    $("#dice-display-1").append(htmlText)
 
-    $("#dice-display-1").removeClass("dice1");
-    $("#dice-display-1").removeClass("dice2");
-    $("#dice-display-1").removeClass("dice3");
-    $("#dice-display-1").removeClass("dice4");
-    $("#dice-display-1").removeClass("dice5");
-    $("#dice-display-1").removeClass("dice6");
-    $("#dice-display-1").addClass(index);
 
     var turnscoreDisplay = 0;
     player1.turnscore.forEach(function(val) {
@@ -96,8 +90,6 @@ $(document).ready(function() {
       $("#turn-tally1").text(turnscoreDisplay);
     });
 
-    var htmlText = diceStringHTML(currentRollValue)
-    $("#dice-turn-roll-1").append(htmlText)
 
     if (currentRollValue === 1){
       $("#turn-tally1").text("0");
@@ -110,13 +102,11 @@ $(document).ready(function() {
     currentRollValue = player2.roll();
 
     var index = diceClass[currentRollValue];
-    $("#dice-display-2").removeClass("dice1");
-    $("#dice-display-2").removeClass("dice2");
-    $("#dice-display-2").removeClass("dice3");
-    $("#dice-display-2").removeClass("dice4");
-    $("#dice-display-2").removeClass("dice5");
-    $("#dice-display-2").removeClass("dice6");
-    $("#dice-display-2").addClass(index);
+    var htmlText = diceStringHTML(currentRollValue)
+    $("#dice-turn-roll-2").append(htmlText)
+    $("#dice-display-2").text("")
+    $("#dice-display-2").append(htmlText)
+
 
     var turnscoreDisplay = 0;
     player2.turnscore.forEach(function(val) {
@@ -124,8 +114,6 @@ $(document).ready(function() {
       $("#turn-tally2").text(turnscoreDisplay);
     });
 
-    var htmlText = diceStringHTML(currentRollValue)
-    $("#dice-turn-roll-2").append(htmlText)
 
     if (currentRollValue === 1) {
       $("#turn-tally2").text("0");
