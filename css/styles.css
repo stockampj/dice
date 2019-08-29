@@ -3,13 +3,13 @@ body {
 }
 
 #dice-display-1 {
-  height: 60px;
-  width: 60px;
+  height: 200px;
+  width: 200px;
 }
 
 #dice-display-2 {
-  height: 60px;
-  width: 60px;
+  height: 200px;
+  width: 200px;
 }
 
 .dice1 {
@@ -48,4 +48,8 @@ body {
   width: 40%;
   min-width: 300px;
   float: left;
+}
+
+.dice-log img{
+  height: 50px;
 }

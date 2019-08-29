@@ -56,9 +56,15 @@ Player.prototype.endTurn = function() {
 }
 
 // Front End
-var diceClass = [" ", "dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
 
 $(document).ready(function() {
+
+  var diceClass = [" ", "dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
+
+  function diceStringHTML(number) {
+    return ("<img src=\"img/" + number + ".png\">")
+  }
+
   $("#start").submit(function(event) {
     event.preventDefault();
     var player1name = $("#player1-name").val();
@@ -73,9 +79,9 @@ $(document).ready(function() {
 
   $("#roll-button1").click(function() {
     currentRollValue = player1.roll();
-    console.log(currentRollValue);
+
     var index = diceClass[currentRollValue];
-    console.log(index);
+
     $("#dice-display-1").removeClass("dice1");
     $("#dice-display-1").removeClass("dice2");
     $("#dice-display-1").removeClass("dice3");
@@ -89,17 +95,21 @@ $(document).ready(function() {
       turnscoreDisplay += val
       $("#turn-tally1").text(turnscoreDisplay);
     });
+
+    var htmlText = diceStringHTML(currentRollValue)
+    $("#dice-turn-roll-1").append(htmlText)
+
     if (currentRollValue === 1){
       $("#turn-tally1").text("0");
+      $("#dice-turn-roll-1").text("");
     }
   });
 
 
   $("#roll-button2").click(function() {
     currentRollValue = player2.roll();
-    console.log(currentRollValue);
+
     var index = diceClass[currentRollValue];
-    console.log(index);
     $("#dice-display-2").removeClass("dice1");
     $("#dice-display-2").removeClass("dice2");
     $("#dice-display-2").removeClass("dice3");
@@ -113,8 +123,13 @@ $(document).ready(function() {
       turnscoreDisplay += val
       $("#turn-tally2").text(turnscoreDisplay);
     });
+
+    var htmlText = diceStringHTML(currentRollValue)
+    $("#dice-turn-roll-2").append(htmlText)
+
     if (currentRollValue === 1) {
       $("#turn-tally2").text("0");
+      $("#dice-turn-roll-2").text("");
     }
   });
 
@@ -122,12 +137,14 @@ $(document).ready(function() {
     player1.endTurn();
     $("#player1-score").text(player1.totalscore);
     $("#turn-tally1").text(" ");
+    $("#dice-turn-roll-1").text("");
   })
 
   $("#hold-button2").click(function() {
     player2.endTurn();
     $("#player2-score").text(player2.totalscore);
     $("#turn-tally2").text(" ");
+    $("#dice-turn-roll-2").text("");
   })
 });
 
