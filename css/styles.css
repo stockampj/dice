@@ -1,10 +1,16 @@
 body {
-  background-color: rgba(115, 160, 186);
+  background-color: #ab8641;
+  background-image: url(../img/background.jpg);
+  color: white;
+
 }
 
 h2 {
   text-align: center;
 }
+
+
+
 .screenborder {
   display: block;
   margin-left: auto;
@@ -27,6 +33,12 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 20px;
+  width: 40%;
+  background-color: #dbb60d;
+  border: none
 }
 
 .leftish{
@@ -40,9 +52,13 @@ button {
   width: 200px;
   padding: 10px;
   margin: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #dice-display-1 img{
+
   height: 100%;
 }
 
@@ -51,9 +67,13 @@ button {
   width: 200px;
   padding: 10px;
   margin: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #dice-display-2 img{
+
   height: 100%;
 }
 
@@ -98,10 +118,21 @@ button {
   min-width: 300px;
   margin-left: auto;
   margin-right: auto;
-  border: solid thick black;
+  /* border: solid thick white; */
   border-radius: 30px;
   overflow: hidden;
 }
+
+#player1-panel {
+  background-color: rgba(173, 17, 0, 0.8);
+  border: solid thick darkred;
+}
+
+#player2-panel {
+  background-color: rgba(0, 0, 173, 0.8);
+  border: solid thick darkblue;
+}
+
 
 .dice-log img{
   height: 50px;
@@ -109,6 +140,6 @@ button {
 
 .scorebox {
   display:inline-block;
-  float: right;
+  margin-top: 50%;
   height: 230px;
 }
