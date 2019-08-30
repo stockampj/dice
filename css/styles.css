@@ -1,6 +1,5 @@
 body {
-  background-color: #ab8641;
-  background-image: url(../img/background.jpg);
+  background-color: lightgray;
   color: white;
 }
 
@@ -72,10 +71,11 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgba(36, 36, 36, 0.4);
+  border-radius: 30px;
 }
 
 #dice-display-1 img{
-
   height: 100%;
 }
 
@@ -87,10 +87,11 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgba(36, 36, 36, 0.4);
+  border-radius: 30px;
 }
 
 #dice-display-2 img{
-
   height: 100%;
 }
 
@@ -226,4 +227,20 @@ input {
 
 #gamescreen {
   display: none;
+}
+
+.winscreen {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.red {
+  background-color: rgba(173, 17, 0, 0.8);
+}
+
+.blue {
+  background-color: rgba(0, 0, 173, 0.8);
 }
