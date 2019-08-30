@@ -166,6 +166,19 @@ $(document).ready(function() {
     }
 
   })
+
+  $("#replay").click(function() {
+    $(".winscreen").removeClass("blue");
+    $(".winscreen").removeClass("red");
+    $(".winscreen").hide();
+    $("#splashscreen").show();
+    $("#gamescreen").hide();
+    player1.totalscore = 0;
+    player2.totalscore = 0;
+    $(".player1-score").text(player2.totalscore);
+    $(".player2-score").text(player2.totalscore);
+  })
+
 });
 
 
